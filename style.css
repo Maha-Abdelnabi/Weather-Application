@@ -30,3 +30,142 @@ body{
     font-size: 70px;
     font-weight: 100;
 }
+
+
+.date-container .date{
+    font-size: 30px;
+}
+
+.place-container .city{
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.place-container .time-zone{
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.place-container .country{
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.current-info .others{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(73, 73, 83, 0.6);
+    padding: 1em;
+    border-radius: 30px;
+
+    max-width: 420px;
+    margin: 1em;
+    border: 1px solid #eee;
+    font-size: 20px;
+}
+.search{
+display: flex;
+align-items: center;
+justify-content: center;
+
+
+}
+
+#search-btn{
+    font-size: 15px;
+   border-radius: 10px;
+   
+   border: 1px solid rgb(82, 78, 78);
+    height: 2.2em;
+    width: 3.5em;
+    outline: none;
+    background-color: #b9a7a7be;
+}
+
+
+
+.country{
+    border: none;
+    outline: none;
+    padding: 1em 1.5em;
+    margin: 10px;
+   
+    border-radius: 8px;
+    background-color: #f7efef90;
+    font-family: inherit;
+    font-size: 120%;
+}
+
+.current-info .others .weather-item{
+    display: flex;
+    justify-content: space-between;
+}
+
+.future-forcast{
+    background: rgba(73, 73, 83, 0.6);
+    padding: 20px;
+    width: 850px;
+    display: flex;
+    color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    align-items: center;
+
+}
+
+.future-forcast .today{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+.future-forcast .today .other{
+    font-size: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+   
+    padding: 10px;
+}
+.future-forcast .today .day{
+    padding: 0px 15px;
+    background: #5d5d65;
+    border-radius: 50px;
+    text-align: center;
+
+}
+
+.future-forcast .today .temp{
+    font-size: 20px;
+  padding-bottom: 12px;
+}
+
+.future-forcast .weather-forcast{
+    display: flex;
+}
+
+.weather-forcast .weather-forcast-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.weather-forcast .weather-forcast-item .day{
+    padding: 5px 15px;
+    background: #3c3c44;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.weather-forcast .weather-forcast-item .temp{
+    font-weight:100;
+}
