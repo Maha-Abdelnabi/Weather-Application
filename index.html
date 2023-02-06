@@ -28,9 +28,109 @@
     ></script>
   </head>
   <body>
+<div class="container">
+      <div class="current-info">
+        <div class="date-container">
+          <div class="time" id="time">12:30 <span id="am-pm">PM</span></div>
+          <div class="date" id="date">Monay, 24 May</div>
+
+          <div class="others" id="current-weather-items">
+            <div class="place-container">
+              <div class="search">
+                <input
+                  type="text"
+                  placeholder="Enter a city name"
+                  class="country"
+                  id="country"
+                />
+                <button id="search-btn">Search</button>
+              </div>
+              <div class="city">city</div>
+            </div>
+            <img
+              src=" http://openweathermap.org/img/wn/10d@2x.png"
+              alt="weather-icon"
+              class="w-icon"
+              width="120px"
+            />
+            <div class="temp">25c</div>
+            <div class="description">
+              <div>clear</div>
+            </div>
+            <div class="weather-item" id="humidity">
+              <div>humidity</div>
+              <div>121</div>
+            </div>
+            <div class="weather-item" id="wind">
+              <div>Wind Speed</div>
+              <div>222</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="result"></div>
+      </div>
+      <div class="future-forcast">
+        <div class="weather-forcast" id="weather-forcast">
+          <div class="weather-forcast-item">
+            <div class="day day-1">Monday</div>
+            <img
+              src=" http://openweathermap.org/img/wn/10d@2x.png"
+              alt="weather-icon"
+              class="icons1"
+            />
+            <div id="tempreture1">25c</div>
+          </div>
+
+          <div class="weather-forcast" id="weather-forcast">
+            <div class="weather-forcast-item">
+              <div class="day day-2">tuesday</div>
+              <img
+                src=" http://openweathermap.org/img/wn/10d@2x.png"
+                alt="weather-icon"
+                class="icons2"
+              />
+              <div id="tempreture2">25c</div>
+            </div>
+          </div>
+          <div class="weather-forcast" id="weather-forcast">
+            <div class="weather-forcast-item">
+              <div class="day day-3">wednesday</div>
+              <img
+                src=" http://openweathermap.org/img/wn/10d@2x.png"
+                alt="weather-icon"
+                class="icons3"
+              />
+              <div id="tempreture3">25c</div>
+            </div>
+          </div>
+          <div class="weather-forcast" id="weather-forcast">
+            <div class="weather-forcast-item">
+              <div class="day day-4">thursday</div>
+              <img
+                src=" http://openweathermap.org/img/wn/10d@2x.png"
+                alt="weather-icon"
+                class="icons4"
+              />
+              <div id="tempreture4">25c</div>
+            </div>
+          </div>
+          <div class="weather-forcast" id="weather-forcast">
+            <div class="weather-forcast-item">
+              <div class="day day-5">friday</div>
+              <img
+                src=" http://openweathermap.org/img/wn/10d@2x.png"
+                alt="weather-icon"
+                class="icons5"
+              />
+              <div id="tempreture5">25c</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
-    
     <script
       src="https://code.jquery.com/jquery-3.6.3.min.js"
       integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
