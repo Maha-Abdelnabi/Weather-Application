@@ -6,11 +6,11 @@
 
 body{
   
-    background: url(./assets/heatwave-2048x1367.jpg);
+    background: url(./assets/sky-clouds-cloudy-weather.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     
-    height: 100vh;
+   
 }
 
 .container{
@@ -104,14 +104,15 @@ justify-content: center;
 }
 
 .future-forcast{
-    background: rgba(73, 73, 83, 0.6);
+      background: rgba(73, 73, 83, 0.6);
     padding: 20px;
-    width: 850px;
-    display: flex;
+    width: 800px;
+    position: relative;
+   left: 360px;
+   bottom: 310px;
     color: white;
     border: 1px solid white;
     border-radius: 8px;
-    align-items: center;
 
 }
 
