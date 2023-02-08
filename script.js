@@ -38,7 +38,7 @@ var weather = {
       .then((response) => response.json())
       .then((data) => this.displayWeather(data)); //data from api
 
-//this api for 5 days forcast
+    //this api for 5 days forcast
     fetch(
       "https://api.openweathermap.org/data/2.5/forecast?q=" +
         city +
@@ -69,7 +69,7 @@ var weather = {
     var dayCount = 1;
     //looping the data to get 5 days info
     for (var i = 0; i < data.list.length && dayCount < 6; i++) {
-        //var to show the next day date
+      //var to show the next day date
       var nextDay = dayjs().add(dayCount, "day").format("YYYY-MM-DD 06:00:00");
       //this var to display how the date is going to look on each card
       var dayOftheWeek = dayjs().add(dayCount, "day").format("ddd MM D");
@@ -91,7 +91,7 @@ var weather = {
           "Wind: " + speed + "mph";
         document.getElementById("humid" + dayCount).innerText =
           "Humidity: " + humidity + "%";
-          //add one more and repeat
+        //add one more and repeat
         dayCount = dayCount + 1;
       }
     }
@@ -126,20 +126,49 @@ function addContryList(arrcountry) {
     };
     demoDiv.appendChild(btn);
   }
+
+  // Add Clear Button
+  var btn = document.createElement("BUTTON");
+  btn.innerHTML = "Reset";
+  btn.classList.add("reset-btn");
+  btn.onclick = function () {
+    clearHistory();
+  };
+  demoDiv.appendChild(btn);
 }
+
 //this function call the main fuction after click on the city name
 function fetchWeatherForCity(city) {
   weather.fetchWeather(city);
 }
+//remove all the search and start clear
+function clearHistory() {
+  localStorage.removeItem("countryList");
+  arrcountryList = [];
+
+  const demoDiv = document.getElementById("citiesList");
+  while (demoDiv.firstChild) {
+    demoDiv.removeChild(demoDiv.lastChild);
+  }
+
+  // Add Clear Button
+  var btn = document.createElement("BUTTON");
+  btn.innerHTML = "Reset";
+  btn.classList.add("reset-btn");
+  btn.onclick = function () {
+    clearHistory();
+  };
+  demoDiv.appendChild(btn);
+}
+
 //on click it's going to search for the weather
 $("#search-btn").on("click", function () {
   weather.search();
 });
 
-//if user press enter for search 
+//if user press enter for search
 $("#country").on("keyup", function (event) {
   if (event.key == "Enter") {
     weather.search();
   }
 });
-
