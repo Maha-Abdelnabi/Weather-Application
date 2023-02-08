@@ -1,3 +1,8 @@
+//create a local storage
+if (localStorage.getItem("countryList") === null) {
+  localStorage.setItem("countryList", JSON.stringify([]));
+}
+var arrcountryList = JSON.parse(localStorage.getItem("countryList"));
 
 //select elements
 var timeEl = document.getElementById("time");
@@ -31,6 +36,7 @@ var weather = {
     )
       .then((response) => response.json())
       .then((data) => this.displayWeather(data)); //data from api
+
 //this api for 5 days forcast
     fetch(
       "https://api.openweathermap.org/data/2.5/forecast?q=" +
@@ -91,15 +97,44 @@ var weather = {
   },
   //function for getting the content of the search bar
   search: function () {
+    // push the new city after checking that the new city name is not stored..and not duplicate the same city
+    if (arrcountryList.indexOf(countryEl.value) === -1) {
+      arrcountryList.push(countryEl.value);
+    }
+    //then save it
+    localStorage.setItem("countryList", JSON.stringify(arrcountryList));
+
+    addContryList(arrcountryList);
     this.fetchWeather(countryEl.value);
   },
 };
+//function to create the list..and each time to start clean and delete all the buttons
+function addContryList(arrcountry) {
+  var demoDiv = document.getElementById("citiesList");
+  while (demoDiv.firstChild) {
+    demoDiv.removeChild(demoDiv.lastChild);
+  }
+  //create button to include the search of the city
+  for (let i = 0; i < arrcountry.length; i++) {
+    var btn = document.createElement("BUTTON");
+    btn.innerHTML = arrcountry[i];
+    btn.onclick = function () {
+      //onclick call this function that take the city name
+      fetchWeatherForCity(arrcountry[i]);
+    };
+    demoDiv.appendChild(btn);
+  }
+}
+//this function call the main fuction after click on the city name
+function fetchWeatherForCity(city) {
+  weather.fetchWeather(city);
+}
 //on click it's going to search for the weather
 $("#search-btn").on("click", function () {
   weather.search();
 });
 
-//if user press enter for search
+//if user press enter for search 
 $("#country").on("keyup", function (event) {
   if (event.key == "Enter") {
     weather.search();
