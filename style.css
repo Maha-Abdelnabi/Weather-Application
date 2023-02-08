@@ -12,12 +12,11 @@ body{
     
    
 }
-
+/*main container*/
 .container{
- 
     color: white;
 }
-
+/*contain date and time*/
 .current-info{
     display: flex;
     justify-content: space-between;
@@ -29,14 +28,12 @@ body{
 .date-container .time{
     font-size: 70px;
     font-weight: 100;
-
 }
-
 
 .date-container .date{
     font-size: 30px;
 }
-
+/*search and search button*/
 .place-container .city{
     font-size: 50px;
     display: flex;
@@ -53,7 +50,7 @@ body{
     font-size: 12px;
     font-weight: 700;
 }
-
+/* styling the search box */
 .current-info .others{
     display: flex;
     flex-direction: column;
@@ -131,6 +128,7 @@ bottom: 10px;
     border-radius: 8px;
    
 }
+/*the buttons that show the search history*/
 .history-btn{
     padding: 5px 15px;
     background: #3c3c44;
@@ -138,6 +136,7 @@ bottom: 10px;
     color: white;
     border: none; 
 }
+/*reset button*/
 .reset-btn{
     padding: 5px 15px;
     background: #3c3c44;
@@ -145,6 +144,7 @@ bottom: 10px;
     color: white;
     border: 2px solid white;   
 }
+/*the 5 days forcast box*/
 .weather-forcast .weather-forcast-item{
     display: flex;
     flex-direction: column;
@@ -167,6 +167,7 @@ bottom: 10px;
 .weather-forcast .weather-forcast-item .temp{
     font-weight:100;
 }
+/*media query*/
 @media  screen and (max-width:480px ){
     .container{
         padding: 20px;
