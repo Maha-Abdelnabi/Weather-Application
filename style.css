@@ -105,10 +105,10 @@ justify-content: center;
 /*5 days forcast box*/
 .future-forcast{
       background: rgba(73, 73, 83, 0.6);
-    padding: 20px;
+    padding: 10px;
     width: 800px;
     position: relative;
-   left: 30px;
+   right: 140px;
 bottom: 10px;
     color: white;
     border: 1px solid white;
@@ -116,34 +116,7 @@ bottom: 10px;
 
 }
 
-.future-forcast .today{
-  display: flex;
-  align-items: center;
-  justify-content: center;  
-}
-.future-forcast .today .other{
-    font-size: 30px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 10px;
-   
-    padding: 10px;
-}
-.future-forcast .today .day{
-    padding: 0px 15px;
-    background: #5d5d65;
-    border-radius: 50px;
-    text-align: center;
-
-}
-
-.future-forcast .today .temp{
-    font-size: 20px;
-  padding-bottom: 12px;
-}
 
 .future-forcast .weather-forcast{
     display: flex;
@@ -154,7 +127,7 @@ bottom: 10px;
     padding: 20px;
     width: 800px;
     position: relative;
-   left: 30px;
+   left: 15px;
    color: white;
     border: 1px solid white;
     border-radius: 8px;
@@ -173,10 +146,11 @@ bottom: 10px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0 10px;
+    margin: 30px 10px 10px 10px;
     border: 1px solid #eee;
     border-radius: 10px;
     padding: 15px;
+    width: 120px;
 }
 
 .weather-forcast .weather-forcast-item .day{
