@@ -6,7 +6,7 @@
 
 body{
   
-    background: url(./assets/sky-clouds-cloudy-weather.jpg);
+    background: url(./assets/heatwave-2048x1367.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -29,6 +29,7 @@ body{
 .date-container .time{
     font-size: 70px;
     font-weight: 100;
+
 }
 
 
@@ -91,7 +92,6 @@ justify-content: center;
     outline: none;
     padding: 1em 1.5em;
     margin: 10px;
-   
     border-radius: 8px;
     background-color: #f7efef90;
     font-family: inherit;
@@ -102,14 +102,14 @@ justify-content: center;
     display: flex;
     justify-content: space-between;
 }
-
+/*5 days forcast box*/
 .future-forcast{
       background: rgba(73, 73, 83, 0.6);
     padding: 20px;
     width: 800px;
     position: relative;
-   left: 360px;
-   bottom: 310px;
+   left: 30px;
+bottom: 10px;
     color: white;
     border: 1px solid white;
     border-radius: 8px;
@@ -147,6 +147,25 @@ justify-content: center;
 
 .future-forcast .weather-forcast{
     display: flex;
+}
+/*show hisory search box*/
+.citiesList{
+   background: rgba(73, 73, 83, 0.6);  
+    padding: 20px;
+    width: 800px;
+    position: relative;
+   left: 30px;
+   color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+   
+}
+.history-btn{
+    padding: 5px 15px;
+    background: #3c3c44;
+    border-radius: 50px;
+    color: white;
+    border: none; 
 }
 
 .weather-forcast .weather-forcast-item{

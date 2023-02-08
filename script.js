@@ -18,6 +18,7 @@ var descriptionEl = document.querySelector(".description");
 var humidityEl = document.getElementById("humidity");
 var windEl = document.getElementById("wind");
 var dayEl = document.querySelectorAll(".day");
+var searchHistoryBt = document.getElementById("citiesList");
 
 //updat time for now
 timeEl.innerHTML = dayjs().format("hh:mm a");
@@ -60,7 +61,7 @@ var weather = {
     iconEl.src = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
     descriptionEl.innerText = description;
     humidityEl.innerText = "Humidity: " + humidity + "%";
-    windEl.innerText = "Wind Speed: " + speed + "km/h";
+    windEl.innerText = "Wind Speed: " + speed + "mph";
   },
 
   //display the 5 days forcast on the page
@@ -69,7 +70,7 @@ var weather = {
     //looping the data to get 5 days info
     for (var i = 0; i < data.list.length && dayCount < 6; i++) {
         //var to show the next day date
-      var nextDay = dayjs().add(dayCount, "day").format("YYYY-MM-DD 12:00:00");
+      var nextDay = dayjs().add(dayCount, "day").format("YYYY-MM-DD 06:00:00");
       //this var to display how the date is going to look on each card
       var dayOftheWeek = dayjs().add(dayCount, "day").format("ddd MM D");
       console.log(dayOftheWeek);
@@ -87,7 +88,7 @@ var weather = {
         document.querySelector(".icons" + dayCount).src =
           "http://openweathermap.org/img/wn/" + icon + "@2x.png";
         document.getElementById("wind" + dayCount).innerText =
-          "Wind: " + speed + "km/h";
+          "Wind: " + speed + "mph";
         document.getElementById("humid" + dayCount).innerText =
           "Humidity: " + humidity + "%";
           //add one more and repeat
@@ -117,6 +118,7 @@ function addContryList(arrcountry) {
   //create button to include the search of the city
   for (let i = 0; i < arrcountry.length; i++) {
     var btn = document.createElement("BUTTON");
+    btn.classList.add("history-btn");
     btn.innerHTML = arrcountry[i];
     btn.onclick = function () {
       //onclick call this function that take the city name
